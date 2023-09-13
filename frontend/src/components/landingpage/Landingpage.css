@@ -1,0 +1,92 @@
+.aboutit{
+    margin-top: 0px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 23px;
+    padding-left: 10px;
+}
+.lbtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+body{
+    margin: 0px;
+}
+.body .img{
+    height: 60vh;
+    width:  60vh;
+    /* border: 1px solid red; */
+    background-image: url("../../contents/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.body{
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.desc{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 50vh;
+    height: 50vh;
+}
+.heading{
+    font-family: 'UnifrakturCook', cursive; 
+    font-size: 6vh;
+    margin-bottom: 0px;
+}
+.landingpage{
+    background-image: url("../../contents/images/pngegg.png");
+    background-size: 125px 12px ;
+    background-repeat: repeat;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+    /* display: block; */
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+.login{
+    background-color: #008080;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+.login:hover{
+    cursor: pointer;
+    background-color: #2cc2c2;
+}
+.signup{
+    background-color: #198754;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size:22px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+.signup:hover{
+    cursor: pointer;
+    background-color: #11c672;
+}
+.name{
+    font-family: 'Corinthia', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-size: 5vh;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
