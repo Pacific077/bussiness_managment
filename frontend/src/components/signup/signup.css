@@ -1,0 +1,107 @@
+.signuppage{
+    height: 100vh;
+    display: flex;
+}
+.sihnfrsthalf{
+    height: 100%;
+    width: 45%;
+    background-image: url("../../contents/images/smoke.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-right: 15px solid white;
+    color: #C0C0C0;
+}
+.sihnfrsthalf h1{
+    font-family: 'UnifrakturCook', cursive;  
+    font-size: 300%;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 3vh;
+}
+.sign2ndhalf{
+    height: 100%;
+    width: 55%;
+    background-image: url("../../contents/images/planepaper.jpg");
+    background-size: 100% 50%;
+    /* border-right: 15px dashed white; */
+}
+.sellernumbers,.buyersnumbers,.productsNumber{
+    margin-left: 3vh;
+    margin-top: 10vh;
+    font-size: 7vh;
+    font-weight: 700;
+    margin-bottom: 2vh;
+    color: #ffd900 ;
+}
+.sellernumberdesc,.sbuyersnumberdesc,.productnumberdesc{
+    margin-left: 3vh;
+    color: #C0C0C0;
+    font-size: 20px;
+    margin-bottom: 7vh;
+    background-color: black;
+    width: fit-content;
+}
+.smalldesc{
+    font-family: 'Dancing Script', cursive;
+    background-color: black;
+    font-size: 25px;
+    
+}
+.sign2ndhalf h1{
+    color: #F5F5DC;
+    font-family: 'UnifrakturCook', cursive;  
+    width: fit-content;
+    margin: auto;
+    font-size: 70px;
+}
+.signupform{
+    height: 70%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid white;
+    margin: auto;
+    margin-top: 10vh;
+    border-radius: 120px
+}
+.signupform label{
+    font-family: 'Dancing Script', cursive;
+    font-size: 23px;
+    margin-top: 3vh;
+    margin-bottom: 1.5vh;
+    color: #F5F5DC;
+}
+.signupform input{
+    width: 55%;
+    height: 29px;
+    border-radius: 14px;
+    outline: none;
+    border: none;
+    margin-bottom: 3vh;
+}
+.signupbtn{
+    margin-top: 4vh;
+    font-size: 17px;
+    background-color: #6B4226 ;
+    color: #F5F5DC;
+    height: 35px;
+    width: 150px ;
+    border-radius: 12%;
+}
+.signupbtn:hover{
+    cursor: pointer;
+    background-color: #785239;
+    transition: 0.3s;
+}
+.alreadyaccount{
+    margin-top: 4vh;
+    font-size: 20px;
+    color: #F5F5DC;
+}
+.link{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    background-color: #6B4226;
+    padding: 5px;
+}
