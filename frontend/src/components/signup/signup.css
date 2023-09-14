@@ -102,6 +102,6 @@
 .link{
     text-decoration: underline;
     color: rgb(255, 255, 255);
-    background-color: #6B4226;
+    /* background-color: #6B4226; */
     padding: 5px;
 }
