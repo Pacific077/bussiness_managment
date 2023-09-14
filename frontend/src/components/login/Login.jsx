@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
+
 import "./login.css";
+import SellerContext from "../../context/Seller/SellerContext";
+
+
 const Login = () => {
+  const Seller = useContext(SellerContext);
+  const {Login}= Seller;
   const [showPassword, setShowPassword] = useState(false);
   const [email, setemail] = useState("");
   const [pass, setpass] = useState("");
-
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    const temp  = {
+      email:email,
+      password:pass
+    }
+    Login(temp);
+  }
   const handlemailchange =(e)=>{
     setemail(e.target.value);
 
@@ -22,7 +35,7 @@ const Login = () => {
       <div className="halfimage"></div>
       <div className="halfform">
         <h1>WELCOME &nbsp;&nbsp;BACK &nbsp;&nbsp;!!</h1>
-        <form action="" method="post">
+        <form action="" method="post" onSubmit={handleSubmit}>
           <div className="email">
             <label htmlFor="">Email</label>
             <input

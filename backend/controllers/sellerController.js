@@ -32,7 +32,7 @@ const LoginSeller = async (req, res, next) => {
     const { email, password } = req.body;
     const seller = await sellerModel.findOne({ email });
     if (!seller) {
-      res.status(400).json({
+      res.status(401).json({
         message: " no user found",
       });
     } else {
@@ -43,7 +43,7 @@ const LoginSeller = async (req, res, next) => {
           message: "loggedd in!!!!",
         });
       } else {
-        res.status(400).json({
+        res.status(401).json({
           message: " invalid password",
         });
       }
