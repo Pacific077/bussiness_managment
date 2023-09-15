@@ -59,4 +59,15 @@ const LoginSeller = async (req, res, next) => {
   }
 };
 
-export { CreateSeller, LoginSeller };
+const profile = async (req,res,next)=>{
+  const {token}= req.cookies;
+  console.log(token);
+  const decoded = jwt.verify(token, 'secretkey');
+  const {id}=decoded
+  console.log(id);
+  const seller =await sellerModel.findById(id);
+  console.log(seller);
+  res.status(200).json(seller);
+}
+
+export { CreateSeller, LoginSeller ,profile};

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import SellerContext from "./SellerContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
+
 const SellerState = (props) => {
-  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate(); 
 
   //sign up api call
   const Signup = async (data) => {
@@ -26,7 +28,7 @@ const SellerState = (props) => {
     console.log("response status from signup", response);
     if(response.status===201){
       toast.success("signed in!!");
-      navigate('/login') 
+      navigate('/login')
     }else{
       const errorMessages = await response.json();
       console.log(errorMessages);
@@ -64,12 +66,30 @@ const SellerState = (props) => {
         toast.warning(err)
       })
     }
-    
+
+  }
+
+  //profile api
+
+  const Profile = async()=>{
+    console.log("reached Profile");
+
+
+    const url = "http://localhost:5000/api/v1/sellers/profile"
+    const response = await fetch(url,{
+      method:"GET",
+      headers:{
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    });
+    const data = await response.json();
+    setUser(data);
   }
   return (
     <div>
 
-    <SellerContext.Provider value={{ Signup,Login }}>
+    <SellerContext.Provider value={{ Signup,Login,Profile,user }}>
       {props.children}
     </SellerContext.Provider>
     <ToastContainer
@@ -79,7 +99,7 @@ const SellerState = (props) => {
       newestOnTop={false}
       closeOnClick
       rtl={false}
-      
+
       pauseOnFocusLoss
       draggable
       pauseOnHover

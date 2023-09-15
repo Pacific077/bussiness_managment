@@ -1,0 +1,44 @@
+.cardshome{
+    display: flex;
+    height: 90vh;
+
+    justify-content: space-evenly;
+    padding-top: 3vh;
+}
+.bottom2{
+    height: 38%;
+    display: flex;
+    justify-content: space-between;
+}
+.left1{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    height: 95%;
+    width: 75%;
+}
+.left2{
+    width: 48%;
+    height: 99%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.right1{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    box-sizing: border-box;
+    height: 95%;
+    width: 25%;
+}
+.top1{
+    height: 86.5%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
