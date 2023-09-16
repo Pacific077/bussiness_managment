@@ -1,6 +1,7 @@
 .profitcard{
     height: 58%;
     width: 100%;
+    box-shadow: 10px 10px 10px gray;
     background-color: white;
     border-radius:10px ;
 }

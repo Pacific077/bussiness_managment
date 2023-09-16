@@ -3,4 +3,46 @@
     background-color: white;
     border-radius: 10px;
     width: 90%;
+    box-shadow: 10px 10px 10px gray;
+    background-image: url("../../contents/images/notes.jpg");
+    background-size: contain;
+    font-size: 3vh;
+    text-align: center;
+    color: #D2691E;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4vh;
+    font-weight: 700;
+}
+.notesform{
+    margin-top: 20%;
+    height: 80%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.notesform input{
+    margin-top: -8vh;
+    background-color: #D2691E;
+    height: 3vh;
+    border-radius: 10px;
+    color: white;
+}
+.notesform input::placeholder{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5vh;
+    color: black;
+}
+.notesform button{
+    background-color: #D2691E;
+    height: 5vh;
+    width: 5vh;
+    margin-left: 50%;
+    border-radius: 10px;
+}
+.notesform button:hover{
+    background-color: #f4883b;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s;
 }

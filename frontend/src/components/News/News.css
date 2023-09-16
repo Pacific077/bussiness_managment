@@ -3,4 +3,35 @@
     height: 95%;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+}
+.needmore{
+    width: 100%;
+    height: 27%;
+    display: flex;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    background-color: #D2691E;
+    border-radius: 10px;
+
+}
+.needmoredesc{
+    width: 50%;
+    height: 27%;
+    
+}
+.popularprod{
+    height: 10%;
+    width: 100%;
+}
+.proditemslist{
+    height: 63%;
+    width: 100%;
+
+}
+.needmoreimg{
+    height: 90%;
+    width:30%;
 }

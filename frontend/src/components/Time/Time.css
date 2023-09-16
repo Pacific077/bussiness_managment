@@ -1,6 +1,39 @@
 .timecard{
     height: 18%;
+    box-shadow: 10px 10px 10px gray;
     width: 90%;
     border-radius: 10px;
     background-color: white;
+    display: flex;
+    color: #D2691E;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../../contents/images/timebg.jpg");
+    background-size: contain;
+}
+.timecard:hover{
+    background-color: black;
+    color: #FFA500;   
+    /* transform: scale(1.05); */
+    transition: 0.3s;
+}
+.time{
+    text-align: center;
+    height: 70%;
+    width: 100%;
+    font-size: 5vh;
+    padding-top: 2vh;
+    box-sizing: border-box;
+    border-bottom: 2px solid #D2691E;
+    
+}
+
+
+.date{
+    padding-top: 1vh;
+    font-size: 3vh;
+    text-align: center;
+    height: 30%;
+    width: 100%;
+    margin-bottom: 2vh;
 }

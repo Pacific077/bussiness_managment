@@ -1,6 +1,14 @@
-.refundcard{
+.client{
+    padding-top: 2vh;
+    box-sizing: border-box;
     height: 95%;
     width: 48%;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: url('../../contents/images/clientsbg.jpg');
+    background-size: contain;
 }

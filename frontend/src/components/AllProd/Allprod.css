@@ -1,6 +1,81 @@
 .allprodcard{
+    padding-top: 2vh;
+    box-sizing: border-box;
     height: 95%;
     width: 48%;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: url('../../contents/images/ordersbg.jpg');
+    background-size: contain;
+}
+.allprodcard:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+.allprodcard:hover .icondes{
+    transition: 0.3s;
+    color: #FFA500;
+}
+.allprodcard:hover .iconcont{
+    transition: 0.3s;
+    background-color: #FFA500;
+}
+.allprodcard:hover .iconquant{
+    transition: 0.3s;
+ color: #FFA500;
+
+}
+.icon{
+    height: 6vh;
+}
+.iconn1{
+    text-align: center;
+    height: 40%;
+    width: 100%;
+}
+.iconcont{
+    padding-top: 1.5vh;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #D2691E;
+    border-radius: 100%;
+    width: 40%;
+    height: 95%;
+    margin: auto;
+    color: white;
+}
+
+.icondes{
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    height: 18%;
+    width: fit-content;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top:5px ;
+    color: #D2691E;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.6vh;
+    font-weight: 800;
+}
+.iconquant{
+
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-color: white;
+    height: 18%;
+}
+.iconquant{
+    font-size: 3vh;
+    color: #D2691E;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
