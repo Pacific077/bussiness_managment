@@ -1,7 +1,60 @@
 .procard{
+    padding-left: 1vh;
+    padding-right: 1vh;
     width: 97%;
-    height: 12.5%;
+    height: 18.5%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.totalsale{
+    width: 31%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 10px 10px 10px grey;
+    background-image: url("../../contents/images/salesbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.totalprofit{
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 10px;
+    background-color: white;
+    width: 31%;
+    height: 100%;
+    background-image: url("../../contents/images/profitbgjpg.jpg");
+    background-size: contain;
+    
+}
+.totalrefunds{
+    box-shadow: 10px 10px 10px grey;
+    background-image: url("../../contents/images/refundbg.jpg");
+    background-size: contain;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px gray;
+    width: 31%;
+    height: 100%;
+
+}
+.totalsalehead{
+    width: fit-content;
+    margin-top: 4px;
+    margin-left: 10px;
+    background-color: white;
+    color: #D2691E;
+    font-size: 2.6vh;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Dancing Script', cursive;
+}
+.totalsalecount{
+    width: fit-content;
+    margin: auto;
+    background-color: white;
+    color: #D2691E;
+    font-size: 5vh;
+    font-family: cursive;
+    margin-top: -7px;
 }

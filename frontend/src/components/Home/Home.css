@@ -7,8 +7,8 @@
     position: sticky;
     top: 0;
 
-    background-color: black;
-    color: aliceblue;
+    background-color: #8B4513;
+    color: black;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -20,10 +20,13 @@
 }
 .homenav2{
     height: 9vh;
-    background-color: black;
-    color: white;
+    background-color: #8B4513;
+    color: black;
     position: sticky;
     top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 .homepage{
     height: 200vh;
@@ -34,7 +37,10 @@
     display: flex;
 }
 .nav1items{
+    font-family: cursive;
+    letter-spacing: 1px;
     padding-top:8px;
+    /* font-size: 2.5vh; */
     box-sizing: border-box;
     height: 5%;
     text-align: center;
@@ -43,8 +49,8 @@
 .nav1items:hover{
     cursor: pointer;
     border: 1px solid white;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: #8B4513;
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -62,7 +68,7 @@
     padding: 2%;
     height: 10%;
     box-sizing: border-box;
-    border-bottom: 2px solid white;
+    border-bottom: 4px solid black;
 }
 .userprofile img{
     /* margin-bottom: 10px; */

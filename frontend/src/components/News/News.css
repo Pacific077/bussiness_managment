@@ -9,7 +9,7 @@
     width: 100%;
     height: 27%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     box-sizing: border-box;
     padding-left: 2vh;
     padding-right: 2vh;
@@ -17,21 +17,145 @@
     border-radius: 10px;
 
 }
+.needmoreimg img{
+    height: 100%;
+    width: 100%;
+}
 .needmoredesc{
     width: 50%;
     height: 27%;
-    
+
 }
 .popularprod{
-    height: 10%;
+    height: 13%;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2vh;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(192, 191, 191) ;
 }
 .proditemslist{
     height: 63%;
     width: 100%;
-
+    background-image: url("../../contents/images/prodbg.jpg");
+    background-size: contain;
+    border-radius: 10px;
 }
 .needmoreimg{
     height: 90%;
     width:30%;
+}
+.needmoredesc h3{
+    font-family: 'UnifrakturCook', cursive;
+    margin-bottom: -10px;
+    font-size: 3.5vh;
+    margin-top: 8px;
+}
+.needmoredesc h5{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4vh;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.needmoredesc button{
+    height: 4vh;
+    border-radius: 10px;
+    margin-top: 4px;
+    background-color: white;
+    color: #D2691E;
+    box-shadow: 5px 5px 5px gray;
+    font-family: cursive;
+    font-size: 2vh;
+}
+.needmoredesc button:hover{
+    background-color: black;
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.popularprohead{
+    height: 100%;
+    width: 30%;
+}
+.popularprohead2{
+    padding-top: 8px;
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+
+}
+.popularprohead h4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5vh;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+.popularprohead p{
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-family: cursive;
+}
+.noline{
+    font-weight: 600;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    color: #D2691E;
+    font-size: 2.6vh;
+    font-family: 'Dancing Script', cursive;
+}
+.popularprohead2 p{
+    margin-top: 8px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-family: cursive;
+
+}
+.popularporductitems{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    border-bottom: 2px solid  rgb(192, 191, 191);
+}
+.popularporductitems:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    /* background-color: ; */
+}
+.popularproductimage{
+    background-color: white;
+    width: 15%;
+    height: 100%;
+    margin-left: 2vh;
+}
+.popularproductname{
+    width: 45%;
+    height: 100%;
+    margin-left: 4vh;
+}
+.popularproductquant{
+    width: 15%;
+    height: 100%;
+    margin-left: 7vh;
+
+}
+.popularproductimage img{
+    height: 90%;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    border-radius: 20px;
+
+}
+.popularproductname h4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.7vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 2vh;
+}
+.popularproductquant h4{
+    background-color: white;
+    text-align: center;
 }
