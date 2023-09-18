@@ -1,7 +1,6 @@
 .cardshome{
     display: flex;
     height: 90vh;
-
     justify-content: space-evenly;
     padding-top: 3vh;
 }

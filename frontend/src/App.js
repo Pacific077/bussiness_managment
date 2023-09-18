@@ -5,6 +5,7 @@ import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import SellerState from './context/Seller/SellerState';
 import Home from './components/Home/Home';
+import ProductsPage from './components/Products/ProductsPage';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route  path='/login' element = {<Login/>} />
       <Route  path='/signup' element = {<Signup/>} />
       <Route  path='/home' element = {<Home/>} />
+      <Route  path='/products' element = {<ProductsPage/>} />
     </Routes>
     </SellerState>
     </BrowserRouter>
