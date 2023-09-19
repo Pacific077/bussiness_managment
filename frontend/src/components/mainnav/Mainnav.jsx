@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import dp from "../../contents/images/dp.jpg"
+import SellerContext from '../../context/Seller/SellerContext'
 const Mainnav = () => {
+  const Seller = useContext(SellerContext);
+  const {Profile,user} = Seller;
+  useEffect(()=>{
+     Profile();
+  },[])
   return (
     <div className="homenavbar">
         <div className="userprofile">
         <img src={dp} alt="a pic" />
            <span className="username">
-              Mr x
+              {user.name}
             </span> 
         </div>
         <div className="nav1items">Home</div>

@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 
 const SellerState = (props) => {
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate(); 
+  const [user, setUser] = useState({});
+  const navigate = useNavigate();
 
   //sign up api call
   const Signup = async (data) => {
@@ -26,26 +26,26 @@ const SellerState = (props) => {
       body: JSON.stringify(body),
     });
     console.log("response status from signup", response);
-    if(response.status===201){
+    if (response.status === 201) {
       toast.success("signed in!!");
-      navigate('/login')
-    }else{
+      navigate("/login");
+    } else {
       const errorMessages = await response.json();
       console.log(errorMessages);
-      errorMessages.forEach((err)=>{
-        toast.warning(err)
-      })
+      errorMessages.forEach((err) => {
+        toast.warning(err);
+      });
     }
   };
 
   //login api
-  const Login = async (data)=>{
-    console.log("reached login fetch api",data);
-   const url  ="http://localhost:5000/api/v1/sellers/login"
-    const body= {
-      email:data.email,
-      password:data.password
-    }
+  const Login = async (data) => {
+    console.log("reached login fetch api", data);
+    const url = "http://localhost:5000/api/v1/sellers/login";
+    const body = {
+      email: data.email,
+      password: data.password,
+    };
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -54,56 +54,58 @@ const SellerState = (props) => {
       body: JSON.stringify(body),
       credentials: "include",
     });
-    if(response.status===201){
+    if (response.status === 201) {
       toast.success("logged in successfully");
-    }
-    else if(response.status===401){
-      toast.error("Invalid id or Pass")
-    }else{
+      navigate("/home");
+    } else if (response.status === 401) {
+      toast.error("Invalid id or Pass");
+    } else {
       const errorMessages = await response.json();
       console.log(errorMessages);
-      errorMessages.forEach((err)=>{
-        toast.warning(err)
-      })
+      errorMessages.forEach((err) => {
+        toast.warning(err);
+      });
     }
-
-  }
+  };
 
   //profile api
 
-  const Profile = async()=>{
-    console.log("reached Profile");
-
-
-    const url = "http://localhost:5000/api/v1/sellers/profile"
-    const response = await fetch(url,{
-      method:"GET",
-      headers:{
+  const Profile = async () => {
+    const url = "http://localhost:5000/api/v1/sellers/profile";
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
         "Content-Type": "application/json",
       },
       credentials: "include",
     });
-    const data = await response.json();
-    setUser(data);
-  }
+    if(response.status === 400){
+      toast.error("Denied Access");
+      navigate('/');
+    }else{
+      const data = await response.json();
+      setUser(data);
+
+    }
+
+  };
   return (
     <div>
-
-    <SellerContext.Provider value={{ Signup,Login,Profile,user }}>
-      {props.children}
-    </SellerContext.Provider>
-    <ToastContainer
-      position="top-center"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="dark" />
+      <SellerContext.Provider value={{ Signup, Login, Profile, user }}>
+        {props.children}
+      </SellerContext.Provider>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

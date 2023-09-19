@@ -6,6 +6,8 @@
     border-bottom-left-radius: 10%;
     padding-left: 8vh;
     box-sizing: border-box;
+    background-image: url("../../contents/images/prodpagebg.png");
+    background-size: 0.7% 20%;
 }
 .productpage{
     height: fit-content;
@@ -111,6 +113,7 @@
 }
 .pordlisthead h1{
     margin-bottom: 2vh;
+    background: black;
 }
 .prodcardimgcont{
     box-sizing: border-box;

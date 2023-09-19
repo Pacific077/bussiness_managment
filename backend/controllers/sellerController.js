@@ -38,7 +38,7 @@ const LoginSeller = async (req, res, next) => {
     } else {
       if (bcrypt.compareSync(password, seller.password)) {
         const token = jwt.sign({id:seller._id},"secretkey");
-        res.cookie('token',token);
+        res.cookie('token',token,{ maxAge: 7 * 24 * 60 * 60 * 1000 });
         res.status(201).json({
           message: "loggedd in!!!!",
         });
@@ -66,7 +66,7 @@ const profile = async (req,res,next)=>{
   const {id}=decoded
   console.log(id);
   const seller =await sellerModel.findById(id);
-  console.log(seller);
+
   res.status(200).json(seller);
 }
 

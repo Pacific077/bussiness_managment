@@ -6,6 +6,9 @@ import Signup from './components/signup/Signup';
 import SellerState from './context/Seller/SellerState';
 import Home from './components/Home/Home';
 import ProductsPage from './components/Products/ProductsPage';
+import Notespage from './components/Notespage/Notespage';
+import Dashboard from './components/Dashboard/Dashboard';
+import NoteState from './context/Notes/NoteState';
 
 
 const App = () => {
@@ -13,13 +16,17 @@ const App = () => {
     
     <BrowserRouter>
     <SellerState>
+    <NoteState>
     <Routes>
       <Route  path='/' element = {<LandinPage/>} />
       <Route  path='/login' element = {<Login/>} />
       <Route  path='/signup' element = {<Signup/>} />
       <Route  path='/home' element = {<Home/>} />
       <Route  path='/products' element = {<ProductsPage/>} />
+      <Route  path='/notes' element = {<Notespage/>} />
+      <Route  path='/dashboard' element = {<Dashboard/>} />
     </Routes>
+      </NoteState>
     </SellerState>
     </BrowserRouter>
 

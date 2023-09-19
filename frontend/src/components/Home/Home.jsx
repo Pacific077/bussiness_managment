@@ -6,18 +6,12 @@ import './Home.css'
 import Mainnav from "../mainnav/Mainnav";
 import Nav2 from "../sec nav/Nav2";
 const Home = () => {
+   
 
-
-    //dont remove commnets
-//   const Seller = useContext(SellerContext);
-//   const { Profile, user } = Seller;
-//   useEffect(() => {
-//     Profile();
-//   }, []);
 
   return (
     <div className="maindivhome">
-     <Mainnav />
+     <Mainnav/>
      <div className="homepage">
         <Nav2/>
         <Cards />

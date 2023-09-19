@@ -1,0 +1,89 @@
+.dashpage{
+    height: fit-content;
+    width: 80%;
+    background-color: #e7d8ee;
+    
+}
+.dashContents{
+    display: flex;
+    justify-content: space-between;
+    height: 87vh;
+    width: 100%;
+    border: 1px solid green;
+    box-sizing: border-box;
+    padding: 2vh;
+}
+.dashleft{
+    width: 74%;
+    height: 100%;
+
+    border-radius: 4%;
+}
+.dashright{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 24%;
+    height: 100%;
+ 
+    border-radius: 4%;
+    
+}
+.dashlefttop{
+    height: 40%;
+    width: 100%;
+    padding: 1vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.dashcardtop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85%;
+    width: 28%;
+    border: 1px solid yellow;
+    border-radius: 8%;
+    
+}
+.dashleftbot{
+    height: 50%;
+    width: 97%;
+    border: 1px solid black;
+    border-radius:10px;
+    margin-left:2vh;
+    margin-top: 4vh;
+}
+.duescard{
+    background-image: url("../../contents/images/refundbg.jpg");
+    background-size:cover;
+}
+.dashcardtop h1{
+    font-family: cursive;
+    color: #ffa500;
+    width: fit-content;
+    background-color: white;
+}
+.latestPayments{
+    border-radius: 15px;
+    width: 91%;
+    height: 50%;
+    border: 1px solid white;
+}
+.dashtotalprofit{
+    width: fit-content;
+    margin-left: 2vh;
+    margin-top: -1vh;
+    margin-bottom: -1.1vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 5vh;
+    color: #ffa500;
+    background-color: white;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    border-radius: 10px;
+}

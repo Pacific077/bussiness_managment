@@ -1,0 +1,42 @@
+.notespage{
+    height: fit-content;
+    width: 80%;
+    background-color: #e7d8ee;
+}
+.notesDispCard{
+    height: 25vh;
+    width: 29%;
+    border: 4px solid #ffa500;
+    background-color: white;
+    margin-left: 1vh;
+    margin-bottom: 4vh;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 2vh;
+}
+.notesDispCard h2,.notesDispCard p{
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+.noteslistcont{
+    padding: 3vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.notesDispCard h2{
+    font-family: cursive;
+    font-size: 3vh;
+    margin-bottom: 1vh;
+    width: fit-content;
+    border-bottom: 3px solid gray;
+}
+.notesDispCard p{
+    margin-bottom: 2vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4vh;
+    letter-spacing: 1px;
+}
+.notesDispCard:hover{
+    background-color: white;
+}
