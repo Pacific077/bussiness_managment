@@ -90,3 +90,9 @@ body{
     justify-content: center;
     margin-bottom: 10vh;
 }
+.typed{
+    font-family: 'Corinthia', cursive;
+    font-size: 5vh;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}

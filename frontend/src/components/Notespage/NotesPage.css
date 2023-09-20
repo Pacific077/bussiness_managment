@@ -40,3 +40,27 @@
 .notesDispCard:hover{
     background-color: white;
 }
+.notetitlecont{
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+    gap: 30px;
+
+}
+.notespageicon{
+    color: #ffa500;
+}
+.notespageicon:hover{
+    transition: transform 0.2s ease-in-out;
+    animation: jiggle 0.1s alternate infinite;
+    cursor: pointer;
+    color: #8b4513;
+}
+@keyframes jiggle {
+    0% {
+        transform: rotate(-10deg); 
+    }
+    100% {
+        transform: rotate(10deg); 
+        }
+}

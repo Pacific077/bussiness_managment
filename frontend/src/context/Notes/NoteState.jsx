@@ -22,16 +22,36 @@ const NoteState = (props) => {
     setNotes(notesfromdb);
   };
 
-  // const AddNotes = (prp)=>{
-  //   const data = {
-  //     Title:prp.title,
+  const AddNotes =async (prp)=>{
+    console.log(prp);
+    const data = {
+      Title:prp.title,
+      Description:prp.desc
+    }
+    const url ="http://localhost:5000/api/v1/notes/createNotes";
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      body: JSON.stringify(data),
+    });
+    if(response.status===201){
+      toast.success("Notes added succesfully");
+    }else{
+      const errorMessages = await response.json();
+      console.log(errorMessages);
+      errorMessages.forEach((err) => {
+        toast.warning(err);
+      });
+    }
 
-  //   }
 
-  // }
+  }
   return (
     <div>
-      <NoteContext.Provider value={{ notes, GetallNotes }}>
+      <NoteContext.Provider value={{ notes, GetallNotes,AddNotes }}>
         {props.children}
       </NoteContext.Provider>
       <ToastContainer

@@ -59,15 +59,19 @@
   font-size: 20px;
   position: absolute;
   left: 110px;
-  top: 40px;
+  top: 46px;
+
 }
 .userprofile {
   /* text-align: center; */
   /* padding-bottom: 10px; */
   margin-top: -30px;
   padding: 2%;
-  height: 10%;
+  height: 13%;
   box-sizing: border-box;
+  background-color: black;
+  color: #ffa500;
+  border-radius: 10px;
   border-bottom: 4px solid black;
 }
 .userprofile img {
@@ -77,6 +81,7 @@
   height: 45px;
   width: 45px;
   border-radius: 100%;
+  margin-top: 16px;
 }
 .updates {
   height: 20vh;

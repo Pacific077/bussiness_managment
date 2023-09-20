@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landingpage.css";
 import { useNavigate } from "react-router-dom";
+import Typed from 'react-typed';
 
 const LandinPage = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const LandinPage = () => {
       <div className="body">
         <div className="desc">
           <div className="heading">Virtual Manager</div>
+          <h1 className="typed"> <Typed strings={['Manage with a Click','Sign up now !!']} typeSpeed={30} backSpeed={30} loop ></Typed> </h1>
           <div className="aboutit">
             Virtual manager streamlines tasks, delegates responsibilities,
             tracks progress, and fosters collaboration in a digital workspace,
