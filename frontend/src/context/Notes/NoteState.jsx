@@ -21,6 +21,14 @@ const NoteState = (props) => {
     console.log(notesfromdb);
     setNotes(notesfromdb);
   };
+
+  // const AddNotes = (prp)=>{
+  //   const data = {
+  //     Title:prp.title,
+
+  //   }
+
+  // }
   return (
     <div>
       <NoteContext.Provider value={{ notes, GetallNotes }}>
