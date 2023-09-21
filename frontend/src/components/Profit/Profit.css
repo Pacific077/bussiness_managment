@@ -4,4 +4,18 @@
     box-shadow: 10px 10px 10px gray;
     background-color: white;
     border-radius:10px ;
+
+}
+.profitcardhead{
+    
+    font-family: "UnifrakturCook", cursive;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-size: 5vh;
+    width: fit-content;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-bottom: 3px solid gray;
 }

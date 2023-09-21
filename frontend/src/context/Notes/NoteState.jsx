@@ -18,10 +18,10 @@ const NoteState = (props) => {
       credentials: "include",
     });
     const notesfromdb = await response.json();
-    console.log(notesfromdb);
+ 
     setNotes(notesfromdb);
   };
-
+  //add notes
   const AddNotes =async (prp)=>{
     console.log(prp);
     const data = {
@@ -46,12 +46,26 @@ const NoteState = (props) => {
         toast.warning(err);
       });
     }
-
-
+  }
+  const DeleteNotes =async (ey)=>{
+    console.log(ey)
+    const url =`http://localhost:5000/api/v1/notes/deleteNotes/${ey}`
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include"
+    });
+    if(response.status===200){
+      console.log("deleted scuuessfully");
+      toast.success("Note Deleted")
+      GetallNotes();
+    }
   }
   return (
     <div>
-      <NoteContext.Provider value={{ notes, GetallNotes,AddNotes }}>
+      <NoteContext.Provider value={{ notes, GetallNotes,AddNotes,DeleteNotes }}>
         {props.children}
       </NoteContext.Provider>
       <ToastContainer
