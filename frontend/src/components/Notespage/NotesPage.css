@@ -66,3 +66,90 @@
         transform: rotate(10deg); 
         }
 }
+#addNote{
+    position: absolute;
+    border: 1px solid black;
+    z-index: 1;
+    background-color: white;
+    margin-left: 20%;
+    background-color: white;
+    height: 50%;
+    width: 35%;
+    border-radius:20px;
+    box-sizing: border-box;
+    padding-left: 4vh;
+}
+#addNote h1{
+    width: fit-content;
+    margin: auto;
+    margin-top: -2vh;
+    font-family: "UnifrakturCook", cursive;
+    color: #ffa500;
+    font-size: 6vh;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 2%;
+    text-shadow: 4px 4px 4px gray;
+    border-bottom: 2px solid black;
+}
+#addNote h3{
+    width: fit-content;
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 1px;
+    font-size: 3vh;
+    margin-bottom: 5px;
+}
+#addNote input{
+    background-color: #D2691E;
+    height: 3vh;
+    border-radius: 10px;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    font-size: 3vh;
+    letter-spacing: 1px;
+}
+.addnoteformcont{
+    display: flex;
+    justify-content: space-between;
+}
+.addnoteleft{
+    width: 48%;
+}
+.addnoteright{
+    width: 48%;
+}
+.addnoteright img{
+    height: 100%;
+    width: 100%;
+}
+.addnoteBtnCont{
+    margin-top: 3vh;
+    display: flex;
+    gap: 1vh;
+}
+.addnotebtn{
+    height: 4.4vh;
+    width: 24%;
+    border-radius: 10px;
+    background-color: #008000;
+    font-family: "Dancing Script", cursive;
+    font-size: 3vh;
+    color: white;
+}
+.addnotebtn:hover{
+    cursor: pointer;
+    background-color: #3cbb3c;
+}
+.cancelnotetbn{
+    border-radius: 10px;
+    height: 4.4vh;
+    width: 33%;
+    background-color: #FF0000;
+    font-family: "Dancing Script", cursive;
+    font-size: 3vh;
+    color: white;
+}
+.cancelnotetbn:hover{
+    cursor: pointer;
+    background-color: #9f0202;
+}

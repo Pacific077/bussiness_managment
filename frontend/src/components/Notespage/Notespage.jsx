@@ -1,12 +1,15 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Mainnav from '../mainnav/Mainnav'
 import Nav2 from '../sec nav/Nav2'
 import "./NotesPage.css"
 import NotesCard from './NotesCard'
 import NoteContext from '../../context/Notes/NotesContext'
 import EditNote from './EditNote'
+import AddNoteForm from './AddNoteForm'
 
 const Notespage = () => {
+  const [isNotevis,setIsNotevis]  = useState(false);
+  const [noteEditid,setNoteeditId]  =useState("")
   const Notes = useContext(NoteContext);
   const {GetallNotes,notes} =Notes;
   useEffect(()=>{
@@ -17,6 +20,9 @@ const Notespage = () => {
       <Mainnav/>
 
       <div className="notespage">
+      {isNotevis && (
+          <AddNoteForm setvis={setIsNotevis} id={noteEditid}/>
+        )}
         <Nav2/>
         {notes.length === 0 && (
         <h5 style={{ marginTop: "5vh" }}>
@@ -25,7 +31,7 @@ const Notespage = () => {
       )}
         <div className="noteslistcont">
         {notes.map((not)=>{
-          return <NotesCard title={not.Title}
+          return <NotesCard seteditId={setNoteeditId} setvis={setIsNotevis} title={not.Title}
           description={not.Description} ey={not._id} key={not._id}/>
         })}
         </div>

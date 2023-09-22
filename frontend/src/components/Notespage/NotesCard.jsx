@@ -9,11 +9,16 @@ const NotesCard = (props) => {
   const handlenotesdelete = ()=>{
     DeleteNotes(props.ey);
   }
+  const {setvis,seteditId} = props;
+  const handleeditclick =()=>{
+    setvis(true);
+    seteditId(props.ey);
+  }
   return (
     <div className='notesDispCard'>
       <div className="notetitlecont">
 
-      <FontAwesomeIcon className='notespageicon' icon={faPenToSquare} size="xl" color='black'/>
+      <FontAwesomeIcon className='notespageicon' onClick={handleeditclick} icon={faPenToSquare} size="xl" color='black'/>
       <FontAwesomeIcon className='notespageicon' onClick={handlenotesdelete} icon={faTrash} size="xl" color='black'/>
       </div>
         <h2>Title</h2>
