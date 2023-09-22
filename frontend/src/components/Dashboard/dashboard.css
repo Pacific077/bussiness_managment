@@ -61,6 +61,7 @@
 .duescard{
     background-image: url("../../contents/images/refundbg.jpg");
     background-size:cover;
+    box-shadow: 10px 10px 10px grey;
 }
 .dashcardtop h1{
     font-family: cursive;

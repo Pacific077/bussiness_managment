@@ -12,6 +12,7 @@ import NoteState from './context/Notes/NoteState';
 import ProductsState from './context/Products/ProductsState';
 
 
+
 const App = () => {
   return (
     
@@ -27,6 +28,7 @@ const App = () => {
       <Route  path='/products' element = {<ProductsPage/>} />
       <Route  path='/notes' element = {<Notespage/>} />
       <Route  path='/dashboard' element = {<Dashboard/>} />
+
     </Routes>
     </ProductsState>  
     </NoteState>
