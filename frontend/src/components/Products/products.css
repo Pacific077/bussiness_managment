@@ -230,6 +230,9 @@
 .addforminput::placeholder{
     color: white;
     padding-left: 4px;
+    font-family: monospace;
+    letter-spacing: 0cap;
+    font-size: 2vh;
 }
 .addformbtn{
     display: flex;
@@ -260,5 +263,7 @@
     transition: 0.3s ease;
     cursor: pointer;
     transform: rotate(720deg);
-
+}
+.addprodtextarea::placeholder{
+    color: white;
 }

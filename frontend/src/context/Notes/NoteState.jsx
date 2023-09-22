@@ -47,6 +47,7 @@ const NoteState = (props) => {
       });
     }
   }
+  //delete Notes
   const DeleteNotes =async (ey)=>{
     console.log(ey)
     const url =`http://localhost:5000/api/v1/notes/deleteNotes/${ey}`
@@ -63,9 +64,38 @@ const NoteState = (props) => {
       GetallNotes();
     }
   }
+  //Edit Notes  
+
+  const EditNotes =async (prp)=>{
+    const data = {
+      Title:prp.title,
+      Description:prp.desc
+    }
+    console.log("i reached edit notes",data);
+    const url = `http://localhost:5000/api/v1/notes/UpdateNotes/${prp.id}`;
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      body: JSON.stringify(data),
+    });
+    if(response.status===400){
+      const errorMessages = await response.json();
+      console.log(errorMessages);
+      errorMessages.forEach((err) => {
+        toast.warning(err);
+      });
+    }else{
+      toast.success("Note Updated !!")
+    }
+    GetallNotes();
+  }
+
   return (
     <div>
-      <NoteContext.Provider value={{ notes, GetallNotes,AddNotes,DeleteNotes }}>
+      <NoteContext.Provider value={{ notes, GetallNotes,AddNotes,DeleteNotes,EditNotes }}>
         {props.children}
       </NoteContext.Provider>
       <ToastContainer

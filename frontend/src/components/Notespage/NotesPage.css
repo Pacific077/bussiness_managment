@@ -84,7 +84,7 @@
     margin: auto;
     margin-top: -2vh;
     font-family: "UnifrakturCook", cursive;
-    color: #ffa500;
+    color: #D2691E;
     font-size: 6vh;
     padding-left: 4%;
     padding-right: 4%;
@@ -107,6 +107,10 @@
     color: white;
     font-size: 3vh;
     letter-spacing: 1px;
+}
+#addNote input::placeholder{
+    color: white;
+    padding-left: 5px;
 }
 .addnoteformcont{
     display: flex;
