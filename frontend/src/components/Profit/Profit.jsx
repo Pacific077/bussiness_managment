@@ -67,7 +67,7 @@ const Profit = () => {
           <Tooltip />
           {/* <Legend /> */}
           <Line type="monotone" dataKey="pv" strokeWidth={2}  stroke="#D2691E" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" strokeWidth={2}  stroke="#82ca9d" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="uv" strokeWidth={2}  stroke="#FFA500" activeDot={{ r: 8 }} />
         </LineChart>
     </div>
   )

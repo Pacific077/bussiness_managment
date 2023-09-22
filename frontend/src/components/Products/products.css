@@ -135,7 +135,7 @@
     font-size: 2.3vh;
 }
 .prodcarddesc button{
-    margin-left:33%;
+    
     height: 36px;
     border-radius: 10px;
     font-family: cursive;
@@ -153,4 +153,18 @@
     height: 100%;
     width: 100%;
     border-radius: 10px;
+}
+.deleditbtncont{
+    display: flex;
+    justify-content: space-between;
+    padding-left:10px ;
+    padding-right:10px ;
+}
+.deleditbtn{
+    height: 35px;
+    width: 30%;
+}
+.deleditbtn{
+    display: flex;
+    justify-content: space-between;
 }

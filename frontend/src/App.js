@@ -9,6 +9,7 @@ import ProductsPage from './components/Products/ProductsPage';
 import Notespage from './components/Notespage/Notespage';
 import Dashboard from './components/Dashboard/Dashboard';
 import NoteState from './context/Notes/NoteState';
+import ProductsState from './context/Products/ProductsState';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
     <BrowserRouter>
     <SellerState>
     <NoteState>
+    <ProductsState>
     <Routes>
       <Route  path='/' element = {<LandinPage/>} />
       <Route  path='/login' element = {<Login/>} />
@@ -26,7 +28,8 @@ const App = () => {
       <Route  path='/notes' element = {<Notespage/>} />
       <Route  path='/dashboard' element = {<Dashboard/>} />
     </Routes>
-      </NoteState>
+    </ProductsState>  
+    </NoteState>
     </SellerState>
     </BrowserRouter>
 

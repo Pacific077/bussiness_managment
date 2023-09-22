@@ -3,7 +3,9 @@ import {Link} from "react-router-dom"
 import "./News.css"
 import graph from "../../contents/images/graph.png"
 import dp from "../../contents/images/dp.jpg"
+
 const News = () => {
+
   return (
     <div className='newscard'>
         <div className="needmore">
