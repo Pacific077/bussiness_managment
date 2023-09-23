@@ -1,0 +1,33 @@
+.homenav2{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 7vh;
+    padding-left: 7vh;
+}
+.nav2iconscont{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+.navtwoicons{
+    box-shadow: 6px 6px 5px grey;
+}
+.navtwoicons:hover{
+    cursor: pointer;
+    animation: jiggle 0.1s alternate infinite;
+}
+.nav2head{
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 200;
+    font-size: 4.4vh;
+    padding-left:5px ;
+    padding-right:5px ;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white;
+    text-shadow: 7px 7px 4px rgb(255, 255, 255);
+}
