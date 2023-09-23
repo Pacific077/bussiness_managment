@@ -10,6 +10,16 @@ const ProduCard = (props) => {
   const hanldeProductDelete = ()=>{
     DeletProduct(props.ey);
   }
+  const setProdId = props.setProdId;
+  const editnotvis = props.editnotvis;
+  const handleProdEditCLick = ()=>{
+    setProdId(props.ey)
+    editnotvis(true);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+    });
+  }
   return (
     <div className="prodcard">
             <div className="prodcardimgcont">
@@ -22,7 +32,7 @@ const ProduCard = (props) => {
               <div className="deleditbtncont">
               <button>Veiw more</button>
               <div className="deleditbtn">
-              <FontAwesomeIcon className='notespageicon' icon={faPenToSquare} size="xl" color='black'/>
+              <FontAwesomeIcon className='notespageicon' onClick={handleProdEditCLick} icon={faPenToSquare} size="xl" color='black'/>
               <FontAwesomeIcon onClick={hanldeProductDelete} className='notespageicon' icon={faTrash} size="xl" color='black'/>
               </div>
               </div>

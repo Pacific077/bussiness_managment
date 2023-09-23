@@ -32,9 +32,9 @@ const Mainnav = () => {
         </div>
         <div className="nav1items" onClick={handleHomeNav}>Home</div>
         <div className="nav1items" onClick={handlenoteNav}>Notes</div>
-        <div className="nav1items">Contact</div>
-        <div className="nav1items" onClick={handleDashNav}>Dashboard</div>
         <div className="nav1items" onClick={handleProdNav}>Products</div>
+        <div className="nav1items" onClick={handleDashNav}>Dashboard</div>
+        <div className="nav1items">Contact</div>
         <div className="nav1items">Customers</div>
         <div className="nav1items">Settings</div>
         <div className="nav1items">Logout</div>

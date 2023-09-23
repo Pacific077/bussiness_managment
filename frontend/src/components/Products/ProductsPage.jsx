@@ -8,8 +8,11 @@ import "../Home/Home.css";
 import ProduCard from "./ProduCard";
 import ProductContext from "../../context/Products/ProductsContext";
 import AddProdForm from "./AddProdForm";
+import EditProdForm from "./EditProdForm";
 const ProductsPage = () => {
+  const[ProdEditId,setProdEditId] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const [EditFormVisible, setEditFormVisible] = useState(false);
   const Products = useContext(ProductContext);
   const { getAllprod, prodarr } = Products;
   useEffect(() => {
@@ -27,6 +30,9 @@ const ProductsPage = () => {
           <AddProdForm
             setVisible={setIsFormVisible}
           />
+        )}
+        {EditFormVisible && (
+          <EditProdForm setVisible={setEditFormVisible} prodId={ProdEditId}/>
         )}
         <Nav2 />
         <div className="productbanner">
@@ -48,6 +54,8 @@ const ProductsPage = () => {
           {prodarr.map((prod) => {
             return (
               <ProduCard
+                editnotvis={setEditFormVisible}
+                setProdId={setProdEditId}
                 prodname={prod.name}
                 Stock={prod.Stock}
                 key={prod._id}

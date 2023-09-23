@@ -74,9 +74,39 @@ const ProductsState =  (props) => {
         getAllprod();
       }
     }
+    //Edit product 
+    const EditProduct =async (prp)=>{
+      console.log("i reached Edit Product ",prp);
+      const url = `http://localhost:5000/api/v1/products/updateProducts/${prp.id}`
+      const data = {
+        name:prp.title,
+        discription:prp.desc,
+        CostPrice:prp.cp,
+        Stock:prp.stock,
+        SellingPrice:prp.sp   
+    }
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",  
+      body: JSON.stringify(data)  
+    });
+    if(response.status===400){
+      const errorMessages = await response.json();
+      console.log(errorMessages);
+      errorMessages.forEach((err) => {
+        toast.warning(err);
+      });
+    }else{
+      toast.success("Producted Edited Successfully")
+        getAllprod();
+    }
+    }
   return (
     <div>
-        <ProductContext.Provider value={{prodarr,getAllprod,DeletProduct,AddProduct}}>
+        <ProductContext.Provider value={{prodarr,getAllprod,DeletProduct,AddProduct,EditProduct}}>
             {props.children}
         </ProductContext.Provider>
         <ToastContainer

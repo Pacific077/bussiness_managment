@@ -267,3 +267,20 @@
 .addprodtextarea::placeholder{
     color: white;
 }
+.editprod{
+    box-shadow: 10px 10px 10px rgb(88, 80, 80);
+}
+.EditProdAdd{
+    background-color: green !important;
+}
+.EditProdCancel{
+    background-color: red !important;
+}
+.EditProdAdd:hover{
+    background-color: rgb(13, 184, 13)!important;
+    color: black !important;
+}
+.EditProdCancel:hover{
+    background-color: rgb(199, 0, 0) !important;
+    color: black !important;
+}
