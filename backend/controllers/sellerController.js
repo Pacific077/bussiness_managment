@@ -1,7 +1,10 @@
 import sellerModel from "../models/sellerModel.js";
 import { validationResult } from "express-validator";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken";
+import clientModel from "../models/clientModel.js";
+
+//signup
 const CreateSeller = async (req, res, next) => {
   const errors = validationResult(req);
   //   console.log(req.body);
@@ -17,7 +20,8 @@ const CreateSeller = async (req, res, next) => {
     res.status(201).send(Seller);
   } else {
     let arr = [];
-    console.log("found errors");``
+    console.log("found errors");
+    ``;
     errors.array().forEach((error) => {
       arr.push(error.msg);
     });
@@ -25,6 +29,8 @@ const CreateSeller = async (req, res, next) => {
     res.status(400).send(arr);
   }
 };
+
+//login
 const LoginSeller = async (req, res, next) => {
   const errors = validationResult(req);
   console.log("login seller");
@@ -37,8 +43,8 @@ const LoginSeller = async (req, res, next) => {
       });
     } else {
       if (bcrypt.compareSync(password, seller.password)) {
-        const token = jwt.sign({id:seller._id},"secretkey");
-        res.cookie('token',token,{ maxAge: 7 * 24 * 60 * 60 * 1000 });
+        const token = jwt.sign({ id: seller._id }, "secretkey");
+        res.cookie("token", token, { maxAge: 7 * 24 * 60 * 60 * 1000 });
         res.status(201).json({
           message: "loggedd in!!!!",
         });
@@ -58,16 +64,26 @@ const LoginSeller = async (req, res, next) => {
     res.status(400).send(arr);
   }
 };
-
-const profile = async (req,res,next)=>{
-  const {token}= req.cookies;
+//profile
+const profile = async (req, res, next) => {
+  const { token } = req.cookies;
   console.log(token);
-  const decoded = jwt.verify(token, 'secretkey');
-  const {id}=decoded
+  const decoded = jwt.verify(token, "secretkey");
+  const { id } = decoded;
   console.log(id);
-  const seller =await sellerModel.findById(id);
+  const seller = await sellerModel.findById(id);
 
   res.status(200).json(seller);
-}
+};
 
-export { CreateSeller, LoginSeller ,profile};
+//createClients
+const createClinets =async (req,res,next)=>{
+  const {name,PhoneNo,address} = req.body;
+  const Client =await clientModel.create({
+    name:name,
+    PhoneNo:PhoneNo,
+    address:address
+  });
+  res.status(200).send(Client);
+}
+export { CreateSeller, LoginSeller, profile ,createClinets};

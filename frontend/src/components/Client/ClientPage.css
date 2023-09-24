@@ -1,0 +1,42 @@
+.clientPage{
+    height: fit-content;
+    width: 80%;
+    background-color: #e7d8ee;
+}
+.clienttable{
+    width: 100%;
+    border: 2px solid green;
+    border-collapse: collapse;
+    border: none;
+    overflow: hidden;
+}
+.clienttablehead{
+    overflow: hidden;
+    height: 9vh;
+    background-color: black;
+    color: white;
+
+}
+.headcontents{
+    width: 20%;
+    border: none;
+    font-family: "Dancing Script", cursive;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 3vh;
+
+}
+.tabledataclient{
+    text-align: center;
+    font-family: cursive;
+
+}
+.clientTableRow:nth-child(even) {
+    height: 7vh;
+    background-color: #FFDDC1;
+}
+
+.clientTableRow:nth-child(odd) {
+    height: 7vh;
+    background-color: #e7d8ee;
+}
