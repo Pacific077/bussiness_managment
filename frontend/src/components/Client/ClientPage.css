@@ -40,3 +40,124 @@
     height: 7vh;
     background-color: #e7d8ee;
 }
+.clientBn{
+    background-image: url("../../contents/images/clientbn.jpg");
+    background-size: cover;
+    height: 30vh;
+    color: white;
+    border-bottom: 2px solid sienna;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clientbanhad{
+    margin-top: 5%;
+    margin-left: -25%;
+    font-family: "UnifrakturCook", cursive;
+    letter-spacing: 1px;
+    font-size: 5vh;
+    text-shadow: 2px 2px 2px red;
+}
+.clientbanbtn{
+    height: 5vh;
+    width: 10vh;
+    box-shadow: 4px 4px 4px white;
+    background-color: rgb(4, 255, 4);
+    border-radius: 2vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5vh;
+}
+.clientbanbtn:hover{
+    cursor: pointer;
+    background-color: green;
+}
+#addClient{
+    position: absolute;
+    border: 1px solid black;
+    z-index: 1;
+    margin-left: 20%;
+    background-color: white;
+    height: 70%;
+    width: 40%;
+    border-radius:20px;
+    padding-left: 3vh;
+    box-sizing: border-box;
+}
+.addClientHead{
+    margin: auto;
+    padding: 2vh;
+    width: fit-content;
+    font-family: "UnifrakturCook", cursive;
+    letter-spacing: 1px;
+    font-size: 5vh;
+    border-bottom: 3px solid #FFD700 ;
+    padding-top: 0;
+    text-shadow: 3px 3px 1px #FF0000 
+}
+.addclintform{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 120%;
+    justify-content: space-evenly;
+}
+.addclintform input{
+    width: 70%;
+    height: 6%;
+    border-radius: 1vh;
+    background-color: #D2691E;
+    color: #e7d8ee;
+}
+.addclintform textarea{
+    width: 70%;
+    background-color: #D2691E;
+    color: #e7d8ee;
+    border-radius: 1vh;
+    border: 2px solid black;
+}
+.addclintform label{
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 1px;
+    font-size: 3vh;
+}
+.addclientimg{
+    width: 50%;
+    height: 100%;
+    background-image: url("../../contents/images/addclientimg.jpg");
+    background-size: contain;
+}
+.addclinetscont{
+    display: flex;
+    margin-top: 1%;
+    height: 60%;
+}
+.addclientsutbmit{
+    margin-left: 70%;
+    height: 5vh;
+    width: 7vh;
+    background-color: rgb(0, 255, 0);
+    border-radius: 1vh;
+    box-shadow: 3px 3px 3px grey;
+    margin-right: 3vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.3vh;
+}
+.addclientsutbmit:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+.addclientcancel{
+    height: 5vh;
+    font-size: 2.3vh;
+    width: 10vh;
+    border-radius: 1vh;
+    box-shadow: 3px 3px 3px grey;
+    background-color: red;
+    color: white;
+    font-family: "Dancing Script", cursive;
+}
+.addclientcancel:hover{
+    background-color: #a40000;
+    cursor: pointer;
+}
