@@ -65,7 +65,9 @@
     background-color: rgb(4, 255, 4);
     border-radius: 2vh;
     font-family: "Dancing Script", cursive;
-    font-size: 2.5vh;
+    font-size: 2.8vh;
+
+    font-weight: 900;
 }
 .clientbanbtn:hover{
     cursor: pointer;
@@ -114,6 +116,7 @@
     color: #e7d8ee;
     border-radius: 1vh;
     border: 2px solid black;
+    resize: none;
 }
 .addclintform label{
     font-family: "Dancing Script", cursive;

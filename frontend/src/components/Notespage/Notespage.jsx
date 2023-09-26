@@ -4,7 +4,7 @@ import Nav2 from '../sec nav/Nav2'
 import "./NotesPage.css"
 import NotesCard from './NotesCard'
 import NoteContext from '../../context/Notes/NotesContext'
-import EditNote from './EditNote'
+
 import AddNoteForm from './AddNoteForm'
 
 const Notespage = () => {

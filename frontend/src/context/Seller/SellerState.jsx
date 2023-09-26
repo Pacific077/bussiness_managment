@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const SellerState = (props) => {
   const [user, setUser] = useState({});
+  const [clientsList,setClientsList]=useState([]);
   const navigate = useNavigate();
 
   //sign up api call
@@ -89,9 +90,24 @@ const SellerState = (props) => {
     }
 
   };
+
+  //get all Clients
+
+  const getAllClinets= async ()=>{
+    const url="http://localhost:5000/api/v1/sellers/clients/all"
+    const response= await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    });
+    const clientsListfromDb= await response.json();
+    setClientsList(clientsListfromDb);
+  }
   return (
     <div>
-      <SellerContext.Provider value={{ Signup, Login, Profile, user }}>
+      <SellerContext.Provider value={{ Signup, Login, Profile, user ,getAllClinets,clientsList}}>
         {props.children}
       </SellerContext.Provider>
       <ToastContainer

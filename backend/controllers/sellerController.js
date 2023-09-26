@@ -79,11 +79,34 @@ const profile = async (req, res, next) => {
 //createClients
 const createClinets =async (req,res,next)=>{
   const {name,PhoneNo,address} = req.body;
+  const {token} =req.cookies;
+  const decoded = jwt.verify(token, "secretkey");
+  const { id } = decoded;
   const Client =await clientModel.create({
     name:name,
+    seller_id:id,
     PhoneNo:PhoneNo,
-    address:address
+    address:address,
+    amount:0,
+    dues:0
   });
   res.status(200).send(Client);
 }
-export { CreateSeller, LoginSeller, profile ,createClinets};
+
+//getallclient
+
+const GetAllClients =async (req,res,next)=>{
+  const {token} =req.cookies;
+  const decoded = jwt.verify(token,"secretkey");
+  const {id}=decoded;
+  const Client = await clientModel.find({
+    seller_id:id
+  });
+  if(!Client){
+    res.status(400).json("no clients")
+  }else{
+    res.status(200).json(Client);
+  }
+}
+
+export { CreateSeller, LoginSeller, profile ,createClinets,GetAllClients};

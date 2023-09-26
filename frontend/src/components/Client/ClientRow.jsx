@@ -1,13 +1,13 @@
 import React from 'react'
 
-const ClientRow = () => {
+const ClientRow = (props) => {
   return (
     <tr className='clientTableRow'>
-    <td className='tabledataclient'>Faisal</td>
-    <td className='tabledataclient'>123456789</td>
-    <td className='tabledataclient'>Old karimgunj</td>
-    <td className='tabledataclient'>23456789</td>
-    <td className='tabledataclient'>6</td>
+    <td className='tabledataclient'>{props.name}</td>
+    <td className='tabledataclient'>{props.phone}</td>
+    <td className='tabledataclient'>{props.address}</td>
+    <td className='tabledataclient'>{props.amount}</td>
+    <td className='tabledataclient'>{props.dues}</td>
   </tr>
   )
 }

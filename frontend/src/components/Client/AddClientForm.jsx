@@ -43,7 +43,7 @@ const AddClientForm = (props) => {
       </div>
       </div>
       <button className='addclientsutbmit' type="submit">Add</button>
-      <button className='addclientcancel'>Cancel</button>
+      <button className='addclientcancel' onClick={handleiconclick}>Cancel</button>
     </form>
   )
 }
