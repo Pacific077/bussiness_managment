@@ -51,7 +51,7 @@
     font-family: "UnifrakturCook", cursive;
     font-size: 6vh;
     margin-top: 0;
-    color: blueviolet;
+    color: #e120cd;
     text-shadow: 3px 3px 3px blue;
 }
 .billItem{
@@ -149,4 +149,63 @@
     padding-right: 2vh;
     margin-bottom: 2vh;
     border-top: 2px solid black;
+}
+.orderbtns{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 6vh;
+    margin-bottom: 2vh;
+}
+.addorderbtn{
+    height: 4vh;
+    margin-right: 3vh;
+    width: 6vh;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    font-family: "Dancing Script", cursive;
+    box-shadow: 5px 5px 3px grey;
+    background-color: #e120cd;
+    color: white;
+}
+.addorderbtn:hover{
+    background-color: #fd6bee;
+    cursor: pointer;
+}
+.cancelorderbtn{
+    height: 4vh;
+    box-shadow: 5px 5px 3px grey;
+    width: 8vh;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    font-family: "Dancing Script", cursive;
+    background-color: #3498db;
+    color: white;
+}
+.cancelorderbtn:hover{
+    background-color: #025187;
+    cursor: pointer;
+}
+.selectClientlist{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5vh;
+}
+.selectClientlist select{
+    background-color: #e7d8ee;
+    width: 30%;
+    height: 4vh;
+    border-radius: 1vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.2vh;
+    text-align: center;
+    margin-right: 10vh;
+
+}
+.selectClientlist label{
+    width: 30%;
+    font-size: 3.2vh;
+    height: 4vh;
+    font-family: "Dancing Script", cursive;
+    margin-left: 8vh;
 }

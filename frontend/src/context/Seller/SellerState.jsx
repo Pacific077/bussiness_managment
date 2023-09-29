@@ -104,6 +104,7 @@ const SellerState = (props) => {
     });
     const clientsListfromDb= await response.json();
     setClientsList(clientsListfromDb);
+    console.log("clinet from db",clientsListfromDb);
   }
   return (
     <div>

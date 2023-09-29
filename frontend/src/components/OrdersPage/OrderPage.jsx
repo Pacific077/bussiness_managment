@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Mainnav from '../mainnav/Mainnav'
 import './OrderPage.css'
 import Nav2 from '../sec nav/Nav2'
 import AddOrderForm from './AddOrderForm'
 const OrderPage = () => {
+  const [isFormVisible,setIsFormVisible] = useState(false);
+  const handleAddbtn =(e)=>{
+    e.preventDefault();
+    setIsFormVisible(true);
+  }
   return (
     <div className='maindivhome'>
         <Mainnav/>
         <div className="orderspage">
-            <AddOrderForm/>
+          {
+            isFormVisible&&<AddOrderForm setvisible={setIsFormVisible}/>
+          }
+            
             <Nav2/>
             <div className="orderbg">
                 <h2>Recived new Order ?</h2>
-                <button>Add</button>
+                <button onClick={handleAddbtn}>Add</button>
             </div>
             <table className='clienttable'>
           <thead className='clienttablehead'>
