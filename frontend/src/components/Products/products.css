@@ -97,8 +97,10 @@
     margin-top: 0vh;
     border: 2px solid black ;
     background-image: url("../../contents/images/prodbg.jpg");
+   
     background-size: contain;
 }
+
 .pordlisthead{
     height: fit-content;
     width: fit-content;

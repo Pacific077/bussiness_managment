@@ -84,6 +84,7 @@
     border-radius:20px;
     padding-left: 3vh;
     box-sizing: border-box;
+    box-shadow: 10px 10px 10px grey;
 }
 .addClientHead{
     margin: auto;

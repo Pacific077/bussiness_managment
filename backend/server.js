@@ -5,6 +5,7 @@ import notesRouter from "./routes/notesRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import cookieParser from "cookie-parser";
 import cors from "cors"
+import OrderRouter from "./routes/orderRoutes.js";
 
 
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use('/api/v1/sellers',sellerRouter);
 app.use('/api/v1/notes',notesRouter);
 app.use('/api/v1/products',productRouter);
+app.use('/api/v1/orders',OrderRouter);
 connectDb();
 app.listen(5000,()=>{
     console.log("server started on port 5000");

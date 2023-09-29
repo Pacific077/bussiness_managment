@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 const ProductsState =  (props) => {
     const [prodarr,setprodarr] = useState([]);
 
+
     //get all products
     const getAllprod = async () =>{
         const url = "http://localhost:5000/api/v1/products/all";
@@ -104,9 +105,36 @@ const ProductsState =  (props) => {
         getAllprod();
     }
     }
+
+    //get product Price
+    const GetProductPrice = async(id)=>{
+      console.log("on my way to reach product price",id);
+      const url = "http://localhost:5000/api/v1/products/productPrice";
+      const data ={
+        id:id
+      }
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",  
+        body: JSON.stringify(data)  
+      }); 
+      if(response.status===400){
+        const errorMessages = await response.json();
+        console.log(errorMessages);
+        errorMessages.forEach((err) => {
+          toast.warning(err);
+        });
+      }else{
+        const price = await response.json();
+        return {price:price};
+      }
+    }
   return (
     <div>
-        <ProductContext.Provider value={{prodarr,getAllprod,DeletProduct,AddProduct,EditProduct}}>
+        <ProductContext.Provider value={{prodarr,getAllprod,DeletProduct,AddProduct,EditProduct,GetProductPrice}}>
             {props.children}
         </ProductContext.Provider>
         <ToastContainer

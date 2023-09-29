@@ -1,0 +1,152 @@
+.orderspage{
+    height: fit-content;
+    width: 80%;
+    background-color: #e7d8ee;
+}
+.orderbg{
+    background-image: url("../../contents/images/orderpagebg.jpg");
+    background-size: cover;
+    height: 40vh;
+    color: white;
+    border-bottom: 2px solid sienna;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.orderbg h2{
+    margin-top: 15vh;
+    font-family: "UnifrakturCook", cursive;
+    letter-spacing: 1px;
+    font-size: 6.5vh;
+    text-shadow: 4px 4px 4px black;
+}
+.orderbg button{
+    background-color: rgb(1, 255, 1);
+    width: 12vh;
+    height: 4.5vh;
+    border-radius: 1vh;
+    color: red;
+    font-family: "Dancing Script", cursive;
+    font-size: 3vh;
+}
+.orderbg button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.3s ease-in;
+    background-color: black;
+    color: #e7d8ee;
+}
+#prodform{
+    position: absolute;
+    border: 1px solid black;
+    z-index: 1;
+    margin-left: 20%;
+    background-color: white;
+    height: fit-content;
+    width: 40%;
+    border-radius:20px 
+}
+.orderhead{
+    text-align: center;
+    font-family: "UnifrakturCook", cursive;
+    font-size: 6vh;
+    margin-top: 0;
+    color: blueviolet;
+    text-shadow: 3px 3px 3px blue;
+}
+.billItem{
+    margin-bottom: 2vh;
+    margin-left: 13vh;
+}
+.prodName{
+    background-color: #e7d8ee;
+    width: 30%;
+    height: 4vh;
+    border-radius: 1vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.2vh;
+    text-align: center;
+    margin-right: 3vh;
+    margin-top: 1.3vh;
+}
+.prodName option:nth-child(odd) {
+    background-color: #d8c8ff; 
+    color:blueviolet;
+}
+.prodName option:nth-child(even) {
+    background-color: #e0e0e0; 
+
+}
+.prodName option{
+    width: 4vh;
+}
+
+.prodNumber{
+    width: 10%;
+    height: 3vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    margin-top: -1vh;
+    margin-right: 3vh;
+    font-family: "Dancing Script", cursive;
+    font-size: 3vh;
+    text-align: center;
+}
+.multi{
+    margin-right: 3vh;
+}
+.eqlsign{
+    margin-right: 3vh;
+}
+.eql{
+    font-size: 3vh;
+    font-family: "Dancing Script", cursive;
+    margin-right: 10vh;
+}
+.additembtn{
+    margin-bottom: 2vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    background-color: greenyellow;
+    border-radius: 8px;
+}
+.additembtn:hover{
+    background-color: green;
+    cursor: pointer;
+}
+.deleteItembtn{
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+}
+.deleteItembtn:hover{
+    background-color: rgb(142, 3, 3);
+    cursor: pointer;
+}
+.additem{
+    display: inline;
+}
+.totalamount{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+.totatext{
+    margin-left: 25vh;
+    font-size: 4vh;
+    letter-spacing: 1px;
+    font-family: "UnifrakturCook", cursive;
+    margin-right: 8vh;
+    color: rgb(0, 56, 37);
+    text-shadow: 3px 3px 2px aquamarine;
+}
+.totalAmount{
+    margin-left: 1vh;
+    font-size: 3vh;
+    font-family: "Dancing Script", cursive;
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin-bottom: 2vh;
+    border-top: 2px solid black;
+}

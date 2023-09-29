@@ -111,4 +111,19 @@ const GetallPoducts = async (req, res, next) => {
   }
 };
 
-export { createProduct, updateProducts, DeleteProduct, GetallPoducts };
+//get product Price
+
+const getProductPrice = async(req,res,next)=>{
+  const {id}=req.body;
+  const Product =await productModel.findById(id);
+  if(!Product){
+    res.status(400).json({
+      message: "product not found"
+    });
+  }else{
+    const {SellingPrice} = Product
+    res.status(200).json(SellingPrice);
+  }
+}
+
+export { createProduct, updateProducts, DeleteProduct, GetallPoducts,getProductPrice };

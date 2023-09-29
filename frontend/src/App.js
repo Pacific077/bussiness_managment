@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import NoteState from './context/Notes/NoteState';
 import ProductsState from './context/Products/ProductsState';
 import ClientPage from './components/Client/ClientPage';
+import OrderPage from './components/OrdersPage/OrderPage';
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
       <Route  path='/notes' element = {<Notespage/>} />
       <Route  path='/dashboard' element = {<Dashboard/>} />
       <Route  path='/clients' element = {<ClientPage/>} />
+      <Route  path='/orders' element = {<OrderPage/>} />
 
     </Routes>
     </ProductsState>  
