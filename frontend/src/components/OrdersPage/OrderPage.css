@@ -230,3 +230,17 @@
     font-family: "Dancing Script", cursive;
     font-size: 2.2vh;
 }
+.tabledataorder{
+    text-align: center;
+    font-family: cursive;
+
+}
+.orderTableRow:nth-child(even) {
+    height: 7vh;
+    background-color: #b5d7ed;
+}
+
+.orderTableRow:nth-child(odd) {
+    height: 7vh;
+    background-color: #e9c2e5;
+}

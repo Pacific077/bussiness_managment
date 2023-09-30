@@ -3,6 +3,7 @@ import Mainnav from '../mainnav/Mainnav'
 import './OrderPage.css'
 import Nav2 from '../sec nav/Nav2'
 import AddOrderForm from './AddOrderForm'
+import OrderRow from './OrderRow'
 const OrderPage = () => {
   const [isFormVisible,setIsFormVisible] = useState(false);
   const handleAddbtn =(e)=>{
@@ -32,7 +33,9 @@ const OrderPage = () => {
               <th className='headcontents'>Total Paid</th>
             </tr>
           </thead>
-          
+          <OrderRow/>
+          <OrderRow/>
+          <OrderRow/>
         </table>
         </div>
     </div>

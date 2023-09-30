@@ -5,6 +5,8 @@ import sellerModel from "../models/sellerModel.js";
 import { validationResult } from "express-validator";
 import jwt from "jsonwebtoken";
 
+
+//creating orders
 const CreateOrder =async (req,res,next)=>{
   const errors = validationResult(req);
   console.log("create order backend");
@@ -58,4 +60,20 @@ const CreateOrder =async (req,res,next)=>{
   }
    
 }
-export {CreateOrder};
+
+//get all orders 
+const getAllorders = async (req,res,next)=>{
+  const { token } = req.cookies;
+  const decoded = jwt.verify(token, "secretkey");
+  const { id } = decoded;
+  const Orders =await OrderModel.find({
+    sellerId:id
+  })
+  if(!Orders){
+    const arr =["No order found"]
+    res.status(400).send(arr);
+  }else{
+    res.send(Orders);
+  }
+}
+export {CreateOrder,getAllorders};
