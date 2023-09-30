@@ -12,6 +12,7 @@ import NoteState from './context/Notes/NoteState';
 import ProductsState from './context/Products/ProductsState';
 import ClientPage from './components/Client/ClientPage';
 import OrderPage from './components/OrdersPage/OrderPage';
+import OrderState from './context/orders/OrderState';
 
 
 
@@ -22,6 +23,8 @@ const App = () => {
     <SellerState>
     <NoteState>
     <ProductsState>
+      <OrderState>
+
     <Routes>
       <Route  path='/' element = {<LandinPage/>} />
       <Route  path='/login' element = {<Login/>} />
@@ -34,6 +37,7 @@ const App = () => {
       <Route  path='/orders' element = {<OrderPage/>} />
 
     </Routes>
+      </OrderState>
     </ProductsState>  
     </NoteState>
     </SellerState>

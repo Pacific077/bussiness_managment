@@ -4,12 +4,16 @@ import { faPlus, faTrash, faX } from "@fortawesome/free-solid-svg-icons";
 import OrderItem from "./OrderItem";
 import ClientOption from "./ClientOption.jsx"
 import SellerContext from "../../context/Seller/SellerContext";
+import OrderContext from "../../context/orders/OrderContext";
 const AddOrderForm = (props) => {
   const [items, setItems] = useState([{ ProdId: 0, ProdAmount:0 }]);
+  const [paid,setpaid]=useState(0);
+  const ordercont = useContext(OrderContext);
   const [totalAmount, setTotalamount] = useState(0);
   const [clientid,setclientid]=useState(0);
   const clientCnt = useContext(SellerContext);
   const {getAllClinets,clientsList}=clientCnt;
+  const{CreateOrder}=ordercont;
   useEffect( ()=>{
     getAllClinets()
   },[])
@@ -40,12 +44,21 @@ const AddOrderForm = (props) => {
   }
   const handleAddbtn =(e)=>{
     e.preventDefault();
-    console.log("after clicking on addbtn")
-    console.log({"items":items,
-  "clientid":clientid});
+  const temp = {
+    clientId :clientid,
+    items:items,
+    paid:paid,
+    totalAmount:totalAmount
+  }
+  CreateOrder(temp);
+  setvisible(false);
   }
   const handleoptionchange = (e)=>{
     setclientid(e.target.value);
+  }
+  const handlepaidchange =(e)=>{
+    setpaid(e.target.value);
+    console.log(paid);
   }
   return (
     <form action="" id="prodform">
@@ -83,6 +96,10 @@ const AddOrderForm = (props) => {
 
             <span className="totaleqsign">=</span>
             <span className="totalAmount">{totalAmount}</span>
+          </div>
+          <div className="paidamnt">
+            <h2>Paid Amount</h2>
+            <input type="number" value={paid} onChange={handlepaidchange}/>
           </div>
           <div className="orderbtns">
             <button className="addorderbtn" onClick={handleAddbtn}>Add</button>

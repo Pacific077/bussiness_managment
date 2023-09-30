@@ -21,7 +21,6 @@ const CreateSeller = async (req, res, next) => {
   } else {
     let arr = [];
     console.log("found errors");
-    ``;
     errors.array().forEach((error) => {
       arr.push(error.msg);
     });
