@@ -30,7 +30,7 @@ const CreateOrder =async (req,res,next)=>{
     for(let i=0;i<products.length;i++){
       const {ProdId,ProdAmount} = products[i];
       const Prod =await productModel.findById(ProdId);
-      const {SellingPrice}  =Prod;
+      const {SellingPrice} = Prod;
       const obj ={
         productId:ProdId,
         prodname:Prod.name,

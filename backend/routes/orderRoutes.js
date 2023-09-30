@@ -1,12 +1,21 @@
-import express from "express"
+import express from "express";
 import { CreateOrder, getAllorders } from "../controllers/OrderController.js";
 import isloggedin from "../auth/isloggedin.js";
 import OrderValidator from "../validators/OrderValidator.js";
 import checkProductStock from "../middlewares/checkproductStock.js";
+import ClientAmountupdate from "../middlewares/clientAmountUpdate.js";
+import ReduceProdStocks from "../middlewares/ReduceProdStock.js";
 
 const OrderRouter = express.Router();
 
-OrderRouter.route("/create").post( isloggedin,OrderValidator,checkProductStock,CreateOrder);
+OrderRouter.route("/create").post(
+  isloggedin,
+  OrderValidator,
+  checkProductStock,
+  ReduceProdStocks,
+  ClientAmountupdate,
+  CreateOrder
+);
 OrderRouter.route("/allorders").get(getAllorders);
 
-export default OrderRouter
+export default OrderRouter;
