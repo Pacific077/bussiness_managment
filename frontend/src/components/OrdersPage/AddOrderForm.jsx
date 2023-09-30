@@ -71,6 +71,7 @@ const AddOrderForm = (props) => {
           <div className="selectClientlist">
             <label htmlFor="">Select Client</label>
             <select name="client" id="" onChange={handleoptionchange}>
+            <option value={0}>---------</option>
               {clientsList.map((client)=>{
                 return <ClientOption name={client.name} key={client._id} ey={client._id}  />
               })}

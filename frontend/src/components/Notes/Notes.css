@@ -11,6 +11,7 @@
     font-family: 'Dancing Script', cursive;
     font-size: 4vh;
     font-weight: 700;
+    box-shadow: 10px 10px 10px gray;
 }
 .notesform{
     margin-top: 20%;

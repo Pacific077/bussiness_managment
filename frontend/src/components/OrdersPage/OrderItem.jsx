@@ -43,6 +43,7 @@ const OrderItem = (props) => {
         onChange={handleOptonChange}
         className="prodName"
       >
+        <option value={0}>---------</option>
         {prodarr.map((prod) => {
           return <OrderOption name={prod.name} key={prod._id} ey={prod._id} />;
         })}
