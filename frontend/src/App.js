@@ -13,6 +13,7 @@ import ProductsState from './context/Products/ProductsState';
 import ClientPage from './components/Client/ClientPage';
 import OrderPage from './components/OrdersPage/OrderPage';
 import OrderState from './context/orders/OrderState';
+import Maintainance from './components/under maintanance/Maintainance';
 
 
 
@@ -35,6 +36,7 @@ const App = () => {
       <Route  path='/dashboard' element = {<Dashboard/>} />
       <Route  path='/clients' element = {<ClientPage/>} />
       <Route  path='/orders' element = {<OrderPage/>} />
+      <Route  path='/maint' element = {<Maintainance/>} />
 
     </Routes>
       </OrderState>

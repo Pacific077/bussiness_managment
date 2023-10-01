@@ -23,6 +23,12 @@
     border-radius: 10px;
     
 }
+.currprog{
+    border-radius: 10px;
+    
+    background-color: green;
+    height: 100%;
+}
 .songcontrols{
     width: 100%;
     height: 38%;

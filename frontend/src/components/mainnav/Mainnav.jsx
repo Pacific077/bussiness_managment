@@ -27,6 +27,12 @@ const Mainnav = () => {
   const handleOrder =()=>{
    navigate('/orders')
   }
+  const handleSettings =()=>{
+   navigate('/maint')
+  }
+  const handlelogout =()=>{
+   navigate('/maint')
+  }
   return (
     <div className="homenavbar">
         <div className="userprofile">
@@ -41,8 +47,8 @@ const Mainnav = () => {
         <div className="nav1items" onClick={handleDashNav}>Dashboard</div>
         <div className="nav1items" onClick={handleClient}>Clients</div>
         <div className="nav1items" onClick={handleOrder}>Orders</div>
-        <div className="nav1items">Settings</div>
-        <div className="nav1items">Logout</div>
+        <div className="nav1items" onClick={handleSettings}>Settings</div>
+        <div className="nav1items" onClick={handlelogout}>Logout</div>
      </div>
   )
 }
