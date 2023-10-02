@@ -42,7 +42,7 @@ const Song = () => {
           </div>
           <div className="songdes">
             <span className="songname">Beliver</span>
-            <span className="songsinger">Sudahnshu</span>
+            <span className="songsinger">Dragons</span>
           </div>
         </div>
         <div className="songprogbar">

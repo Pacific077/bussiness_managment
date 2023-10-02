@@ -4,6 +4,8 @@ import "./dashboard.css"
 import Nav2 from '../sec nav/Nav2'
 import Time from '../Time/Time'
 import Song from '../song/Song'
+import ProductsBarchart from './ProductsBarchart'
+import PaymentList from './PaymentList'
 
 const Dashboard = () => {
   return (
@@ -16,29 +18,25 @@ const Dashboard = () => {
             <div className="dashlefttop">
 
             <div className="dashcardtop duescard">
-              <h1>Total dues</h1>
-              <h1>$40000</h1>
+              <h1 className='smallfont'>Total dues</h1>
+              <h1 className='smallfont'>$40000</h1>
             </div>
             <div className="dashcardtop duescard">
-              <h1>Total dues</h1>
-              <h1>$40000</h1>
+              <h1 className='smallfont'>Total dues</h1>
+              <h1 className='smallfont'>$40000</h1>
             </div>
             <div className="dashcardtop duescard">
-              <h1>Total dues</h1>
-              <h1>$40000</h1>
+              <h1 className='smallfont'>Total dues</h1>
+              <h1 className='smallfont'>$40000</h1>
             </div>
             </div>
-            <h1 className='dashtotalprofit'>Total Profit</h1>
-            <div className="dashleftbot">
-
-            </div>
+            <h1 className='dashtotalprofit'>Products Sold</h1>
+             <ProductsBarchart/>
           </div>
           <div className="dashright">
             <Time/>
             <Song/>
-            <div className="latestPayments">
-
-            </div>
+            <PaymentList />
           </div>
         </div>
       </div>

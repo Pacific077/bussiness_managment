@@ -57,6 +57,9 @@
     border-radius:10px;
     margin-left:2vh;
     margin-top: 4vh;
+    background-color: white;
+    box-shadow: 10px 10px 10px grey;
+ 
 }
 .duescard{
     background-image: url("../../contents/images/refundbg.jpg");
@@ -72,8 +75,10 @@
 .latestPayments{
     border-radius: 15px;
     width: 91%;
+    box-shadow: 10px 10px 10px grey;
     height: 50%;
     border: 1px solid white;
+    background-color: white;
 }
 .dashtotalprofit{
     width: fit-content;
@@ -87,4 +92,73 @@
     padding-left: 3vh;
     padding-right: 3vh;
     border-radius: 10px;
+}
+.smallfont{
+    font-size: 5vh;
+}
+.paymentlistHead{
+    width: fit-content;
+    font-size: 3vh;
+    margin: auto;
+    margin-top: 2vh;
+}
+.PymentListConthead{
+    padding: 1vh;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+.PymentListConthead p{
+    font-size: 2.6vh;
+}
+.dots{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+}
+.transCard{
+    height: 15%;
+    width: 100%;
+    border: 1px solid black;
+}
+.transCard{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 9px;
+}
+.transCard:hover{
+    transform: scale(1.04);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+.transCard p{
+    margin: 0;
+}
+.transCard p{
+    font-size: 2.3vh;
+}
+.namedatetrans{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.namedatetrans p{
+    margin: 0;
+    text-align: center;
+}
+.paymentdate{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8vh !important;
+}
+.pymnting{
+    margin-left: -2vh;
+    width: 18%;
+    height: 100%;
+}
+.pymnting img{
+    height: 100%;
+    width: 90%;
 }

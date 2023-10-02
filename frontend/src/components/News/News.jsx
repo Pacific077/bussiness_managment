@@ -21,11 +21,11 @@ const News = () => {
         <div className="popularprod">
           <div className="popularprohead">
             <h4>Popular Products</h4>
-            <p>Items</p>
+            <p className='goprosubhead'>Items</p>
           </div>
           <div className="popularprohead2">
             <Link className='noline'> View All</Link>
-            <p>Sold</p>
+            <p className='goprosubhead'>Sold</p>
           </div>
 
         </div>
