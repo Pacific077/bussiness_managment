@@ -1,10 +1,13 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
+import SellerContext from '../../context/Seller/SellerContext'
 const AddClientForm = (props) => {
     const [name,setname] = useState("")
     const [phone,setphone] = useState("")
     const [address,setaddress] = useState("")
+    const Seller= useContext(SellerContext);
+    const {AddClinet} =Seller;
     const {setvis}= props;
     const handleiconclick = ()=>{
         setvis(false);
@@ -21,8 +24,18 @@ const AddClientForm = (props) => {
         setaddress(e.target.value);
         console.log(address)
     }
+    const handleCLientSubmit =(e)=>{
+      e.preventDefault();
+      const temp = {
+        name:name,
+        phone:phone,
+        address:address
+      }
+      AddClinet(temp);
+      setvis(false);
+    }
   return (
-    <form action="" id='addClient'>
+    <form action="" id='addClient' onSubmit={handleCLientSubmit}>
         <div className="addProdFormicon">
         <FontAwesomeIcon onClick={handleiconclick} className='addformicon' icon={faX} />
         </div>

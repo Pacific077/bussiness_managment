@@ -48,7 +48,7 @@ const ProductsPage = () => {
           </div>
         </div>
         <div className="pordlisthead">
-          <h1>All Products</h1>
+          <h1 className="allproducttext">All Products</h1>
         </div>
         <div className="productlistcont">
           {prodarr.map((prod) => {

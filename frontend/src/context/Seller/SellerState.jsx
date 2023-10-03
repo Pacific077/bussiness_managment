@@ -106,9 +106,42 @@ const SellerState = (props) => {
     setClientsList(clientsListfromDb);
     console.log("clinet from db",clientsListfromDb);
   }
+
+  // create client
+
+  const AddClinet = async(props)=>{
+    const data ={
+      name:props.name,
+      PhoneNo:props.phone,
+      address:props.address
+    }
+    console.log("on my way to add clinet",props);
+
+    const url = "http://localhost:5000/api/v1/sellers/clients/createClients"
+    const response= await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+      credentials: "include",
+    });
+    if(response.status === 400){
+      const errorMessages = await response.json();
+      console.log(errorMessages);
+      errorMessages.forEach((err) => {
+        toast.error(err);
+      });
+    }else{
+      toast.success("Client Added");
+      getAllClinets();
+    }
+
+
+  }
   return (
     <div>
-      <SellerContext.Provider value={{ Signup, Login, Profile, user ,getAllClinets,clientsList}}>
+      <SellerContext.Provider value={{ Signup, Login, Profile, user ,getAllClinets,clientsList,AddClinet}}>
         {props.children}
       </SellerContext.Provider>
       <ToastContainer

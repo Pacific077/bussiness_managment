@@ -87,10 +87,14 @@
     margin-bottom: -1.1vh;
     font-family: "Dancing Script", cursive;
     font-size: 5vh;
-    color: #ffa500;
+    color: black;
+    text-shadow: 4px 4px 4px #ffa500;
     background-color: white;
     padding-left: 3vh;
     padding-right: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     border-radius: 10px;
 }
 .smallfont{
@@ -98,7 +102,10 @@
 }
 .paymentlistHead{
     width: fit-content;
+    text-shadow: 2px 2px 2px #ffa500;
+    text-decoration: dashed;
     font-size: 3vh;
+    letter-spacing: 2px;
     margin: auto;
     margin-top: 2vh;
 }
