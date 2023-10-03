@@ -13,6 +13,26 @@ const SellerSchema = new Schema({
     password:{
         type:String,
         required:true,
+    },
+    totalOrder:{
+        type:Number,
+        default:0
+    },
+    totalClients:{
+        type:Number,
+        default:0
+    },
+    totalProfit:{
+        type:Number,
+        default:0
+    },
+    totalsold:{
+        type:Number,
+        default:0
+    },
+    totalProd:{
+        type:Number,
+        default:0
     }
 });
 

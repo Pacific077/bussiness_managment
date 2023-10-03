@@ -104,12 +104,14 @@
 }
 .PymentListConthead{
     padding: 1vh;
-    margin-top: 1vh;
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
+    
 }
 .PymentListConthead p{
     font-size: 2.6vh;
+    margin-bottom: 0;
 }
 .dots{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -118,7 +120,7 @@
 .transCard{
     height: 15%;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #8b4513;
 }
 .transCard{
     display: flex;
@@ -161,4 +163,18 @@
 .pymnting img{
     height: 100%;
     width: 90%;
+}
+.paymentlistHead{
+    margin-top: 0;
+    padding-top: 3.45vh;
+    padding-bottom: 3.45vh;
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 1px;
+
+}
+.paymentheadcont{
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 10px;
 }
