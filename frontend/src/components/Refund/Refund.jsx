@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Refund.css'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
+import SellerContext from '../../context/Seller/SellerContext'
 const Refund = () => {
+  const Seller = useContext(SellerContext);
+  const {user} =Seller;
   return (
     <div className='client'>
         <div className="iconn1">
@@ -14,7 +17,7 @@ const Refund = () => {
         Clients
       </div>
       <div className="iconquant">
-        33
+         {user.totalClients}
       </div>
     </div>
   )

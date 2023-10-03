@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Allprod.css'
 import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome'
 import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
+import SellerContext from '../../context/Seller/SellerContext'
 const Allprod = () => {
+  const Seler = useContext(SellerContext);
+  const {user} = Seler;
   return (
     <div className='allprodcard'>
       <div className="iconn1">
@@ -14,7 +17,7 @@ const Allprod = () => {
         Total Orders
       </div>
       <div className="iconquant">
-        4234
+        {user.totalOrder}
       </div>
     </div>
   )

@@ -130,10 +130,13 @@
 }
 .prodcarddesc p{
     padding-left: 13px;
-    color: black;
+    padding-right: 4vh;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
     font-family: cursive;
     width: fit-content;
-    background-color: white;
+    background-color: black;
     font-size: 2.3vh;
 }
 .prodcarddesc button{
