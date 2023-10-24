@@ -19,6 +19,10 @@ const ProductSchema = new Schema({
         required:true
         
     },
+    TotalSold:{
+        type:Number,
+        default:0
+    },
     SellingPrice:{
         type:Number,
         required:true

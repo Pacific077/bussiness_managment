@@ -17,6 +17,7 @@ const ReduceProdStocks  =async (req,res,next) =>{
             email: Prod.email,
         }
         const updprod = await productModel.findByIdAndUpdate(ProdId,newtemp);
+        
     }
     next();
 }
